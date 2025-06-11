@@ -38,6 +38,3 @@ for index_row, row in enumerate(layout_jucatori):
         axis[index_row, index_col].axis("off")
 
 plt.show()
-
-
-
