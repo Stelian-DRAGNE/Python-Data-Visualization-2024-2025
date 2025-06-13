@@ -6,6 +6,15 @@
     <title>all_categories</title>
 </head>
 <body>
-    <h1>all_categories</h1>
+    <h1>Toate categoriile</h1>
+    <ol>
+        {% for cat in categories %}
+
+        <li>
+            {{cat.name}}
+        </li>
+
+        {% endfor %}
+    </ol>
 </body>
 </html>

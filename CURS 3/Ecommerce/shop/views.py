@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Product, Category
 
 # Create your views here.
 
@@ -17,8 +17,11 @@ def product_details_view(request):
 
 
 def all_categories_view(request):
-	context = {}
-	return render(request, 'all_categories.html', context)
+    categories = Category.objects.all()
+    context = {
+		"categories" : categories
+	}
+    return render(request, 'all_categories.html', context)
 
 
 def category_details_view(request):
