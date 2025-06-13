@@ -21,9 +21,10 @@ class Command(BaseCommand):
         BASE_URL = "https://dummyjson.com/"
         URL_PRODUCTS = BASE_URL + "products"
 
-        LIMIT = 50
+        LIMIT = 10
+        SKIP = 50
 
-        response = requests.get(URL_PRODUCTS, {"limit": LIMIT})
+        response = requests.get(URL_PRODUCTS, {"limit": LIMIT, "skip": SKIP})
         product_list = response.json()["products"]
 
         for prod_dict in product_list:
