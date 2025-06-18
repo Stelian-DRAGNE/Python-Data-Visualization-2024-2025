@@ -8,11 +8,9 @@
 <body>
     <h1>Cart</h1>
     <ol>
-
-        {% for prod in produse %}
-            <li> {{ prod }} </li>
+        {% for prod, quantity in  produse.items %}
+            <li> {{prod}} - {{quantity}}</li>
         {% endfor %}
-
     </ol>
 </body>
 </html>
