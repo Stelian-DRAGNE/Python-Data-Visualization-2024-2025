@@ -6,18 +6,23 @@
 	<title>all_products</title>
 </head>
 <body>
-	<h1>Toate produsele</h1>
+
+	<header>
+		<nav>
+			<a href="{% url 'home_url' %}"> Home </a>
+			<a href=""> Contact </a>
+			<a href="{% url 'cart_url' %}"> Cart </a>
+		</nav>
+	</header>
+	<h1> Home </h1>
+
 
 	<ol>
-
 	{% for prod in products %}
-
 		<li>
-
 			<h2>{{prod.name}}</h2>
 			<p>{{prod.description}}</p>
 			<p>  Pret : <b> {{prod.price}} Lei </b></p>
-
 			{% if prod.image %}
 				<img src="{{prod.image.url}}" alt="">
 			{% else %}
@@ -29,10 +34,8 @@
 				{{ form }}
 				<input type="submit" value="Add to Cart">
 			</form>
-
 		</li>
 	{% endfor %}
-
 	</ol>
 
 </body>

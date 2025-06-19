@@ -23,7 +23,7 @@ def add_to_cart_view_pandas_version(request, slug):
     return redirect("cart_url")
 
 
-def all_products_view(request):
+def home_view(request):
 	products = Product.objects.all()
 	form = AddToCartForm()
 	context = {
