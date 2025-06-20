@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+    {% block main %}
+
+        <h1>Cart</h1>
+        <ol>
+            {% for prod, quantity in  produse.items %}
+                <li> {{prod}} - {{quantity}}</li>
+            {% endfor %}
+        </ol>
+
+    {% endblock main %}
